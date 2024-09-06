@@ -143,6 +143,7 @@ void quickSort(Student *s[], int l, int u)
 // Function for binary search by name (non-recursive)
 void binarySearchByName(Student *s[], int n, const string &key)
 {
+    insertionSort(s,n);	
     int low = 0;
     int high = n - 1;
     bool found = false;
@@ -164,6 +165,7 @@ void binarySearchByName(Student *s[], int n, const string &key)
             // Found the first occurrence, print all occurrences
             found = true;
             // Print all students with the same name, including duplicates
+            cout<<endl<<"Printing student(s) with the name "<<key<<endl;
             int i = mid;
             while (i >= 0 && s[i]->name == key)
             {
@@ -220,10 +222,7 @@ int main()
 	display(s,c);
 	
 	//function for bubble sort
-	bSort(s,c);	
-	
-	//function for insertion sort
-	insertionSort(s,c);	
+	bSort(s,c);		
 	
 	float key;
 	cout<<"Enter SGPA to search number of student:";
@@ -233,8 +232,8 @@ int main()
 	
 	// Call quickSort to sort the array
 	cout<<endl<<"Top 10 toppers of class"<<endl;
-    quickSort(s, 0, c-1);
-    display(s,c);
+    	quickSort(s, 0, c-1);
+    	display(s,c);
 	
 	string n;
 	cout<<endl<<"Enter name to search:";
