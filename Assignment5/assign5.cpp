@@ -15,7 +15,7 @@ public:
     }
 };
 
-class BinaryTree {
+class BinarysearchTree {
 private:
     Node* root;
 
@@ -74,7 +74,7 @@ private:
     }
 
 public:
-    BinaryTree() {
+    BinarysearchTree() {
         this->root = NULL;
     }
 
@@ -93,7 +93,7 @@ public:
 };
 
 int main() {
-    BinaryTree tree;
+    BinarysearchTree tree;
     int choice;
 
     while (true) {
